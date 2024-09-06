@@ -1,3 +1,87 @@
 body {
   background-color: #fbfbfb;
+  font-family: "Courier New", Courier, monospace;
+  color: #424242;
+}
+
+h1,
+h2,
+dt {
+  &:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+dt {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  & > b {
+    text-transform: uppercase;
+    color: #bf360c;
+    position: relative;
+  }
+}
+
+a {
+  color: #6200ea;
+  text-decoration: none;
+  &:hover {
+    color: #b388ff;
+  }
+}
+
+ul,
+ol {
+  margin-left: 1rem;
+  & > li {
+    padding: 0.25rem 0.5rem;
+    max-width: fit-content;
+    &:nth-child(odd) {
+      background-color: #fbfbfb;
+    }
+  }
+}
+
+main,
+.card {
+  padding: 1rem 2rem;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 10px #0000001a;
+  margin: 0;
+  height: max-content;
+}
+
+article {
+  & > header {
+    & > img {
+      min-height: 100px;
+      width: 100%;
+      object-fit: contain;
+      border-top: 1px solid #0000001a;
+      border-bottom: 1px solid #0000001a;
+    }
+  }
+}
+
+.toc {
+  position: sticky;
+  top: 1rem;
 }
